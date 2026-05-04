@@ -1,20 +1,26 @@
 async function cekData() {
-  const nisn = document.getElementById("nisn").value;
-  const tanggalLahir = document.getElementById("tanggalLahir").value;
+  const nisn = document.getElementById("nisn").value.trim();
   const hasil = document.getElementById("hasil");
 
-  if (!nisn || !tanggalLahir) {
-    hasil.innerHTML = "<p style='color:red;'>Lengkapi data dulu</p>";
+  // Validasi
+  if (!nisn) {
+    hasil.innerHTML = "<p style='color:red;'>Masukkan NISN terlebih dahulu</p>";
     return;
   }
+
+  if (nisn.length !== 10) {
+    hasil.innerHTML = "<p style='color:red;'>NISN harus 10 digit</p>";
+    return;
+  }
+
+  // Loading
+  hasil.innerHTML = "<div class='loading'>Memverifikasi data...</div>";
 
   try {
     const response = await fetch("data.json");
     const data = await response.json();
 
-    const siswa = data.find(s =>
-      s.nisn === nisn && s.tanggal_lahir === tanggalLahir
-    );
+    const siswa = data.find(s => s.nisn === nisn);
 
     if (siswa) {
 
@@ -26,7 +32,6 @@ async function cekData() {
             <h2>LULUS</h2>
           </div>
         `;
-
         confettiEffect();
 
       } else {
@@ -49,7 +54,7 @@ async function cekData() {
   }
 }
 
-/* CONFETTI EFFECT */
+/* CONFETTI */
 function confettiEffect() {
   const duration = 1500;
   const end = Date.now() + duration;
@@ -58,7 +63,7 @@ function confettiEffect() {
     if (Date.now() > end) return clearInterval(interval);
 
     confetti({
-      particleCount: 5,
+      particleCount: 20,
       spread: 70,
       origin: { y: 0.6 }
     });
