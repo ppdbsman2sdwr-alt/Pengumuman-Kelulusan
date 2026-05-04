@@ -18,7 +18,7 @@ body {
   height: 100vh;
 }
 
-/* CARD */
+/* CARD UTAMA */
 .box {
   background: white;
   padding: 30px;
@@ -28,6 +28,15 @@ body {
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   animation: fadeIn 0.8s ease;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+p {
+  color: #666;
+  font-size: 14px;
 }
 
 /* INPUT */
@@ -82,7 +91,7 @@ button:hover {
 .footer {
   margin-top: 15px;
   font-size: 12px;
-  color: #888;
+  color: #999;
 }
 </style>
 </head>
@@ -91,7 +100,7 @@ button:hover {
 
 <div class="box">
   <h2>PENGUMUMAN KELULUSAN</h2>
-  <p>SMA Negeri 2 Sendawar<br>2025/2026</p>
+  <p>SMA Negeri 2 Sendawar<br>Tahun Ajaran 2025/2026</p>
 
   <input type="text" id="nisn" placeholder="Masukkan NISN">
   <input type="date" id="tanggalLahir">
@@ -103,6 +112,10 @@ button:hover {
   <div class="footer">© SMAN 2 Sendawar</div>
 </div>
 
+<!-- CONFETTI WAJIB DI ATAS -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- SCRIPT UTAMA -->
 <script src="script.js"></script>
 
 </body>
