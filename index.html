@@ -10,6 +10,7 @@
 
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -68,12 +69,6 @@
       background: #005f8a;
     }
 
-    .loading {
-      margin-top: 15px;
-      color: #555;
-      font-size: 14px;
-    }
-
     .result {
       margin-top: 20px;
       padding: 20px;
@@ -109,18 +104,22 @@
   <h2>PENGUMUMAN KELULUSAN</h2>
   <p>SMA Negeri 2 Sendawar<br>Tahun Ajaran 2025/2026</p>
 
+  <!-- INPUT NISN -->
   <input type="text" id="nisn" placeholder="Masukkan NISN" maxlength="10">
 
-  <button onclick="cekData()">Cek Hasil</button>
+  <!-- BUTTON (SUDAH FIX) -->
+  <button id="btnCek">Cek Hasil</button>
 
+  <!-- HASIL -->
   <div id="hasil"></div>
 
   <div class="footer">© SMAN 2 Sendawar</div>
 </div>
 
-<!-- Confetti (WAJIB di atas script.js) -->
+<!-- CONFETTI -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
+<!-- SCRIPT -->
 <script src="script.js"></script>
 
 </body>
