@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pengumuman Kelulusan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pengumuman Kelulusan</title>
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0077b6, #00b4d8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    .box {
-      background: white;
-      padding: 30px 20px;
-      border-radius: 15px;
-      width: 90%;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+/* CARD */
+.box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 0.8s ease;
+}
 
-    h1 {
-      font-size: 20px;
-      margin-bottom: 5px;
-    }
+/* INPUT */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
 
-    p {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 20px;
-    }
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #0077b6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
+button:hover {
+  background: #005f8a;
+}
 
-    button {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background: #0077b6;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+/* HASIL */
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  animation: fadeIn 0.5s ease;
+}
 
-    button:hover {
-      background: #005f8a;
-    }
+.lulus {
+  background: linear-gradient(135deg, #1d3557, #457b9d);
+}
 
-    .footer {
-      margin-top: 15px;
-      font-size: 12px;
-      color: #888;
-    }
-  </style>
+.tidak {
+  background: linear-gradient(135deg, #d62828, #f77f00);
+}
+
+/* ANIMASI */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #888;
+}
+</style>
 </head>
+
 <body>
 
 <div class="box">
-  <h1>PENGUMUMAN KELULUSAN</h1>
-  <p>SMA Negeri 2 Sendawar<br>Tahun Ajaran 2025/2026</p>
+  <h2>PENGUMUMAN KELULUSAN</h2>
+  <p>SMA Negeri 2 Sendawar<br>2025/2026</p>
 
   <input type="text" id="nisn" placeholder="Masukkan NISN">
   <input type="date" id="tanggalLahir">
@@ -85,9 +100,7 @@
 
   <div id="hasil"></div>
 
-  <div class="footer">
-    © SMAN 2 Sendawar
-  </div>
+  <div class="footer">© SMAN 2 Sendawar</div>
 </div>
 
 <script src="script.js"></script>
