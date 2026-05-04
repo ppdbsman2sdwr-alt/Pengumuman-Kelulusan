@@ -47,7 +47,7 @@ async function cekData() {
       if (siswa.status === "LULUS") {
         hasil.innerHTML = `
           <div class="result lulus">
-            <h3>📢 PENGUMUMAN KELULUSAN</h3>
+            <h3>PENGUMUMAN KELULUSAN SISWA SMAN 2 SENDAWAR</h3>
             <hr style="border:1px solid rgba(255,255,255,0.3);">
 
             <p><b>Nama Siswa</b></p>
